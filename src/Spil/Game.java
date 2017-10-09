@@ -19,7 +19,7 @@ public class Game {
 			if(playerScores[0] > 40 || playerScores[1] > 40) {
 				break;
 			}		
-			
+			 
 			nextTurn(turn);
 			pressEnter();
 		}		
