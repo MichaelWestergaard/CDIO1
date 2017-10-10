@@ -15,7 +15,7 @@ public class Game {
 		
 		while(true) {
 
-			if(playerScores[0] > 40 || playerScores[1] > 40) {
+			if(playerScores[0] >= 40 || playerScores[1] >= 40) {
 				break;
 			}		
 			 
