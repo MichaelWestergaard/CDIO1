@@ -14,12 +14,7 @@ public class Game {
 		System.out.println("Tryk [ENTER] for at starte spillet");
 		pressEnter();
 		
-		while(true) {
-
-			if(playerScores[0] >= 40 || playerScores[1] >= 40) {
-				break;
-			}		
-			 
+		while(playerScores[0] < 40 && playerScores[1] < 40) {
 			nextTurn(turn);
 			pressEnter();
 		}		
