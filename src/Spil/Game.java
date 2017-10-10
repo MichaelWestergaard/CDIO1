@@ -1,6 +1,7 @@
 package Spil;
 
 import java.io.IOException;
+import java.util.Scanner;
 
 public class Game {
 
@@ -36,7 +37,7 @@ public class Game {
 	public static void nextTurn(int turn) {
 		if(turn % 2 == 0) {
 			diceGame.rollDice();
-			System.out.println("Spiller 1 slog: " + diceGame.getSum());
+			System.out.print("Spiller 1 slog: " + diceGame.getSum());
 			playerScores[0] += diceGame.getSum();
 			
 		} else {
@@ -63,11 +64,8 @@ public class Game {
 	}
 	
 	public static void pressEnter() {
-		try {
-			System.in.read();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		Scanner input = new Scanner(System.in);
+		input.hasNextLine();
 	}
 
 }
