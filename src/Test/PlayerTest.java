@@ -40,10 +40,11 @@ public class PlayerTest {
 		//Brug assertEquals() for at tjekke testen
 		//assert(expected, actual);
 		
+		int expected = 10;
+		testPlayer.addPoints(10);
+		int actual = testPlayer.getScore();
+		assertEquals(expected, actual);
 		
-		
-		
-		fail("Not yet implemented");
 	}
 
 	@Test
@@ -52,7 +53,10 @@ public class PlayerTest {
 		//og så brug testPlayer.getScore() for at få scoren
 		//Brug assertEquals() for at tjekke testen
 		//assert(expected, actual);
-		fail("Not yet implemented");
+		int expected = 10;
+		testPlayer.addPoints(10);
+		int actual = testPlayer.getScore();
+		assertEquals(expected, actual);
 	}
 
 }
