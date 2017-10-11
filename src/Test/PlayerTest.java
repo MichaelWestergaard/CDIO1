@@ -9,11 +9,12 @@ import org.junit.Test;
 import Spil.Player;
 
 public class PlayerTest {
-
+	
 	Player testPlayer = new Player("Test");
 	
 	@Before
 	public void setUp() throws Exception {
+		
 	}
 
 	@After
@@ -25,7 +26,11 @@ public class PlayerTest {
 		//Brug testPlayer.getName() og se om navnet er lig med "Test"
 		//Brug assertEquals() for at tjekke testen
 		//assert(expected, actual);
-		fail("Not yet implemented");
+		
+		String expected="Test", actual=testPlayer.getName();
+		
+		assertEquals(expected, actual);
+		
 	}
 
 	@Test
@@ -34,6 +39,10 @@ public class PlayerTest {
 		//og så brug testPlayer.getScore() for at få scoren
 		//Brug assertEquals() for at tjekke testen
 		//assert(expected, actual);
+		
+		
+		
+		
 		fail("Not yet implemented");
 	}
 
