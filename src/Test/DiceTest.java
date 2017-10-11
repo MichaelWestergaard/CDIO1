@@ -8,7 +8,7 @@ import Spil.Dice;
 
 public class DiceTest {
 
-Dice testDice = new Dice();
+	Dice testDice = new Dice();
 	
 	@Test
 	public void diceRollTest() {
@@ -111,16 +111,20 @@ Dice testDice = new Dice();
 			eightTrue == false || nineTrue == false || tenTrue == false || elevenTrue == false || twelveTrue == false) {
 			fail("Dice roll does not meet the requirements.");
 		}
-		
-			
-		
-		
-		
+				
 	}
 
 	@Test
 	public void testDiceSum() {
-		fail("Not yet implemented");
+		//Test om diceSum metoden virker efter hensigten
+		int dice1 = 5, dice2 = 2;
+		
+		int expected = dice1 + dice2;
+		testDice.diceSum(dice1, dice2);
+		int actual = testDice.getSum();
+		
+		assertEquals(expected, actual);
+		
 	}
 
 	@Test
@@ -130,7 +134,15 @@ Dice testDice = new Dice();
 
 	@Test
 	public void testGetSum() {
-		fail("Not yet implemented");
+		
+		int dice1 = 5, dice2 = 2;
+		testDice.diceSum(dice1, dice2);
+		
+		int expected = 7;
+		
+		int actual = testDice.getSum();
+		
+		assertEquals(expected, actual);
 	}
 
 }
