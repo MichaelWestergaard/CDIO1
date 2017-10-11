@@ -2,8 +2,8 @@ package Spil;
 
 public class Player {
 
-	public String name;
-	int score = 0;
+	private String name;
+	private int score = 0;
 
 	public Player (String name) {
 		this.name = name;
