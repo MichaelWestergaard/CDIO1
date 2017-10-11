@@ -8,7 +8,6 @@ import Spil.Player;
 public class Game {
 
 	static int turn = 0;
-	static int[] playerScores = { 0, 0 };
 	static Dice diceGame = new Dice();
 	static Player Player1, Player2;
 	
@@ -27,17 +26,17 @@ public class Game {
 		System.out.println("Tryk [ENTER] for at starte spillet");
 		pressEnter();
 		
-		while(playerScores[0] < 40 && playerScores[1] < 40) {
+		while(Player1.getScore() < 40 && Player2.getScore() < 40) {
 			nextTurn(turn);
 			pressEnter();
 		}		
 
 		showScore();
 		
-		if(playerScores[0] > playerScores[1]) {
-			System.out.println( Player1.getName()  + " vandt med " + playerScores[0] + " point!");
+		if(Player1.getScore() > Player2.getScore()) {
+			System.out.println( Player1.getName()  + " vandt med " + Player1.getScore() + " point!");
 		} else {
-			System.out.println( Player2.getName()  + " vandt med " + playerScores[1] + " point!");
+			System.out.println( Player2.getName()  + " vandt med " + Player2.getScore() + " point!");
 		}
 
 	}
@@ -46,12 +45,12 @@ public class Game {
 		if(turn % 2 == 0) {
 			diceGame.rollDice();
 			System.out.print( Player1.getName()  + " slog: " + diceGame.getSum());
-			playerScores[0] += diceGame.getSum();
+			Player1.addPoints(diceGame.getSum());
 			
 		} else {
 			diceGame.rollDice();
 			System.out.println(Player2.getName()  + " slog: " + diceGame.getSum());
-			playerScores[1] += diceGame.getSum();
+			Player2.addPoints(diceGame.getSum());
 
 			showScore();
 			System.out.println();
@@ -64,9 +63,9 @@ public class Game {
 
 		System.out.println("-------------------------------------");
 		System.out.println("Score:");
-		System.out.print( Player1.getName()  + ": " + playerScores[0]);
+		System.out.print( Player1.getName()  + ": " + Player1.getScore());
 		System.out.print(" | ");
-		System.out.print( Player2.getName()  + ": " + playerScores[1]);
+		System.out.print( Player2.getName()  + ": " + Player2.getScore());
 		System.out.println();
 		System.out.println("-------------------------------------");
 	}
