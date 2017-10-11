@@ -17,7 +17,7 @@ public class PlayerTest {
 	}
 
 	@Test
-	public void testPlayer() {
+	public void testPlayer() { //
 		fail("Not yet implemented");
 	}
 
