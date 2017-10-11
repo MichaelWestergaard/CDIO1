@@ -6,9 +6,9 @@ import org.junit.Test;
 
 public class DiceTest {
 
-	@Test
+	@Test // Tester om terningen giver andre værdier end 1-6
 	public void testRollDice() {
-		fail("Not yet implemented");
+		
 	}
 
 	@Test
