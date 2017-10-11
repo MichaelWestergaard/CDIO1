@@ -21,12 +21,9 @@ public class PlayerTest {
 	}
 
 	@Test
-	public void testPlayer() { //
-		fail("Not yet implemented");
-	}
-
-	@Test
 	public void testGetName() {
+		//Brug testPlayer.getName() og se om navnet er lig med "Test"
+		//Brug assertEquals() for at tjekke testen
 		fail("Not yet implemented");
 	}
 
@@ -40,6 +37,9 @@ public class PlayerTest {
 
 	@Test
 	public void testAddPoints() {
+		//Brug testPlayer.addPoints(10) for at give spilleren 10 point
+		//og så brug testPlayer.getScore() for at få scoren
+		//Brug assertEquals() for at tjekke testen
 		fail("Not yet implemented");
 	}
 
