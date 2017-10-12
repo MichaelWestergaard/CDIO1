@@ -114,11 +114,7 @@ public class DiceTest {
 			eightTrue == false || nineTrue == false || tenTrue == false || elevenTrue == false || twelveTrue == false) {
 			fail("Dice roll does not meet the requirements.");
 		}
-<<<<<<< HEAD
-		
-=======
-				
->>>>>>> branch 'master' of https://github.com/MichaelWestergaard/CDIO1
+
 	}
 
 	@Test
