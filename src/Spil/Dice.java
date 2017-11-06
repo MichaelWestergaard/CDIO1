@@ -10,11 +10,11 @@ public class Dice {
 	public void rollDice() {
 		dice1 = (int)(Math.random()*6) + 1; //Terning 1 sættes til at være 1-6
 		dice2 = (int)(Math.random()*6) + 1; //Terning 2 sættes til at være 1-6
-		diceSum();
+		diceSum(dice1, dice2);
 	}
 	
-	public void diceSum() {
-		sum = dice1 + dice2; //Finder summen af de to terninger
+	public void diceSum(int value1, int value2) {
+		sum = value1 + value2; //Finder summen af de to terninger
 	}
 
 	public boolean getEns() {
